@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="div-header">
+      <h1>
+        <img
+          src="C:\Users\50683\Desktop\api\Sin título.jpg"
+          alt="Descripción de la imagen"
+          style="height: 30px"
+        />
+      </h1>
+
+      <nav>
+        <ul>
+          <li id="cerrar">
+            <span class="material-icons">logout</span>
+            <a href="#contacto">Cerrar sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="id-div-key" class="div-key">
+      <div class="div-key-intern">
+        <p >
+          Clave Cliente: <b id="examKey">???????</b
+          ><button id="changeExamen" class="change">Cambiar</button>
+        </p>
+        <p>
+          Clave Administrador: <b  id="adminKey">???????</b>
+          <button id="changeAdmin" class="change">Cambiar</button>
+        </p>
+      </div>
+    </div>
+
+    <div  class="div-change"  >
+
+      <div id="id-div-change" style="display: none;">
+        <p id="typeChange">Clave: <b id="actualKey">KHJ/&</b>
+        </p>
+
+        <div id="changeBox">
+        <div class="key-box">
+          <div id="div-new-actual">        
+            <input type="text" id="id-actual-key" class="input"  required>
+      <label  id="etiqueta1" for="id-actual-key">Ingresa la nueva clave</label></div>
+
+          
+
+          <button id="update" type="submit" class="btn-update">Actualizar</button>
+          <button id="cancel" type="submit" class="btn-cancel" >Salir</button>
+
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="div-final">Usuario Administrador</div>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

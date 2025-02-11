@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin-right: 70%;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  body {
+    height: 100vh;
+    background-color: rgb(36, 45, 52);
+    font-family: Arial, sans-serif;
+    padding-top: 50px; /* Asegura que el contenido no se solape con el navbar */
+  }
+  
+  .div-header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Posiciona el div en la parte superior */
+    top: 0; /* Asegura que el div esté en la parte superior */
+    left: 0; /* Asegura que el div cubra todo el ancho */
+    z-index: 1000; /* Para que el div esté por encima de otros elementos */
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Alinea horizontalmente, espacio entre el h1 y el nav */
+    height: 60px; /* Opcional: puedes ajustar la altura según tus necesidades */
+  }
+  
+  nav {
+    margin-left: auto; /* Para alinear el nav a la derecha */
+    margin-right: 10px; /* Ajusta este valor si quieres mayor separación del borde */
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos del ul hacia la derecha */
+  }
+  
+  nav ul li {
+    margin-left: 25px;
+    margin-right: 5px¿;
+    padding-left: 5px;
+    color: white;
+    padding: 10px 0; /* Ajusta este valor para cambiar el grosor vertical */
+    width: auto; /* Se adapta al contenido */
+    padding: 5px; /* Espacio dentro del borde */
+    text-align: center;
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Alinea horizontalmente, espacio entre el h1 y el nav */
+  
+    /* border: 2px solid white; /* Agrega un borde negro con grosor de 2px */
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  span {
+    margin-right: 10px;
+    padding-bottom: 2px;
+  }
+  
+  .div-key,
+  .div-change {
+    display: flex; /* Usamos Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    margin-top: 100px;
+  }
+  
+  .div-key-intern {
+    text-align: center; /* Centra el texto dentro del div */
+    color: white;
+    width: 100%;
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  .div-final {
+    position: fixed; /* Posición fija en la pantalla */
+    bottom: 0; /* Coloca el div en la parte inferior de la pantalla */
+    left: 0; /* Alinea el div a la izquierda */
+    width: 100%; /* Hace que el div ocupe todo el ancho de la ventana */
+    background-color: rgb(36, 52, 64);
+    color: white; /* Color del texto */
+    text-align: center; /* Centrado del texto */
+    padding: 40px;
+  }
+  
+  .change {
+    font-size: 15px;
+    height: 25px;
+    width: 70px;
+    margin: 5px;
+    background-color: rgb(54, 230, 54);
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    text-decoration: none;
+    border-radius: 2px; /* Bordes redondeados */
+  }
+  
+  .change:hover {
+    background-color: rgb(10, 97, 10);
+  }
+  
+  #cerrar:hover {
+    background-color: rgb(34, 36, 34);
+  }
+  
+  
+  @media (max-width: 1024px) {
+    h1 {
+      width: 40%;
+      margin-right: 10%;
+      margin-left: 30%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    a {
+      display: none;
+    }
+    
+    .change {
+      width: 70%;
+  
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 768px) {
+    .change {
+      width: 120px;
+  
+    }
+  }
+  
+  #changeBox {
+    background: #1c1c1c;
+    padding: 40px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  .key-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .key-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .key-box input:focus {
+    border-bottom: 2px solid #3498db;
+  }
+   #etiqueta1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .key-box #id-actual-key:focus ~ #etiqueta1,
+  .key-box #id-actual-key:valid ~ #etiqueta1 {
+    top: -20px;
+    left: 0;
+    color: #3498db;
+    font-size: 12px;
+  }
+  
+  
+  
+  #etiqueta2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 80px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .key-box #id-new-key:focus ~ #etiqueta2,
+  .key-box #id-new-key:valid ~ #etiqueta2{
+    top: -20px;
+    left: 0;
+    color: #3498db;
+    font-size: 12px;
+  }
+  .key-box input::placeholder {
+    color: #bbb;
+    opacity: 0.5;
+  }
+  
+  .btn-cancel,
+  .btn-update {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .btn-cancel:hover,
+  .btn-update:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  
+  .btn-update{
+    background-color: #1fa604;
+  
+  }
+  
+  .btn-cancel{
+    background-color: #3498db;
+  
+  }
+  
+  .btn-update:hover{
+    background-color: #156804;
+  
+  }
+  
+  .btn-cancel:hover{
+    background-color: #00406b;
+  }
+  
+  
+  #id-div-change{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  
+  
+  #typeChange, #actualKey{
+    color: white;
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+  
+  
